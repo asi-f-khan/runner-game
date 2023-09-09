@@ -1,0 +1,91 @@
+/* Center everything vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    overflow: hidden; /* Hide horizontal scrollbar */
+  }
+  
+  /* Style the canvas */
+  canvas {
+    display: block;
+    background-color: #272727;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style the restart button */
+  #restart {
+    opacity: 0.9;
+    border: none;
+    background-color: #ff4c4c;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    display: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #restart:hover {
+    background-color: #ff3333;
+  }
+  
+  /* Style the score display */
+  #score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Style the game over message */
+  #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #ff4c4c;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: none;
+  }
+  
+  /* Style the main menu or instructions (if applicable) */
+  #instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    display: none;
+  }
+  
+  /* Add animation effects as needed */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
